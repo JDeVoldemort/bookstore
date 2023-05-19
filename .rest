@@ -74,24 +74,24 @@ GET http://localhost:8080/toAquisition/645569048c151a7063a19ef6 HTTP/1.1
 DELETE http://localhost:8080/toAquisition/6456d227a3e8252bccff4b5b HTTP/1.1
 
 ###
-GET https://cse-341-bookstore-dhh4.onrender.com/ HTTP/1.1
+GET https://cse-341-bookstore.onrender.com// HTTP/1.1
 ###
 
 
 
-GET https://cse-341-bookstore-dhh4.onrender.com/stock HTTP/1.1
+GET https://cse-341-bookstore.onrender.com//stock HTTP/1.1
 ###
-GET https://cse-341-bookstore-dhh4.onrender.com/toAquisition HTTP/1.1
+GET https://cse-341-bookstore.onrender.com//toAquisition HTTP/1.1
 ###
-GET https://cse-341-bookstore-dhh4.onrender.com/stock/61a921f6028954d4f0319e6d HTTP/1.1
+GET https://cse-341-bookstore.onrender.com//stock/61a921f6028954d4f0319e6d HTTP/1.1
 ###
-GET https://cse-341-bookstore-dhh4.onrender.com/toAquisition/61a921f6028954d4f0319e6b HTTP/1.1
+GET https://cse-341-bookstore.onrender.com//toAquisition/61a921f6028954d4f0319e6b HTTP/1.1
 ###
 
 ###
 
 ### Create stock
-POST https://cse-341-bookstore-dhh4.onrender.com/stock HTTP/1.1
+POST https://cse-341-bookstore.onrender.com//stock HTTP/1.1
 content-type: application/json
 
 {
@@ -104,7 +104,7 @@ content-type: application/json
     "edition": "2nd"
 }
 ### PUT stock
-PUT https://cse-341-bookstore-dhh4.onrender.com/stock/6456d87ad3d37ce0285e88a7 HTTP/1.1
+PUT https://cse-341-bookstore.onrender.com//stock/6456d87ad3d37ce0285e88a7 HTTP/1.1
 content-type: application/json
 
 {
@@ -119,11 +119,11 @@ content-type: application/json
 ###
 
 ### DELETE stock
-DELETE https://cse-341-bookstore-dhh4.onrender.com/stock/6456d87ad3d37ce0285e88a7 HTTP/1.1
+DELETE https://cse-341-bookstore.onrender.com//stock/6456d87ad3d37ce0285e88a7 HTTP/1.1
 
 ###
 ### Create toAquisition
-POST https://cse-341-bookstore-dhh4.onrender.com/toAquisition HTTP/1.1
+POST https://cse-341-bookstore.onrender.com//toAquisition HTTP/1.1
 content-type: application/json
 
 {
@@ -134,7 +134,7 @@ content-type: application/json
     "edition": "5th"
 }
 ### PUT toAquisition
-PUT https://cse-341-bookstore-dhh4.onrender.com/toAquisition/6456d87ad3d37ce0285e88a7 HTTP/1.1
+PUT https://cse-341-bookstore.onrender.com//toAquisition/6456d87ad3d37ce0285e88a7 HTTP/1.1
 content-type: application/json
 
 {
@@ -147,6 +147,6 @@ content-type: application/json
 ###
 
 ### DELETE toAquisition
-DELETE https://cse-341-bookstore-dhh4.onrender.com/toAquisition/6456d87ad3d37ce0285e88a7 HTTP/1.1
+DELETE https://cse-341-bookstore.onrender.com//toAquisition/6456d87ad3d37ce0285e88a7 HTTP/1.1
 
 ###
