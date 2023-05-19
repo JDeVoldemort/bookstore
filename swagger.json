@@ -5,7 +5,7 @@
     "description": "Bookstore API",
     "version": "1.0.0"
   },
-  "host": "cse-341-bookstore-dhh4.onrender.com",
+  "host": "cse-341-bookstore.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
