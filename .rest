@@ -1,0 +1,152 @@
+GET http://localhost:8080 HTTP/1.1
+###
+
+GET http://localhost:8080/stock HTTP/1.1
+###
+GET http://localhost:8080/toAquisition HTTP/1.1
+###
+GET http://localhost:8080/stock/61a921f6028954d4f0319e6d HTTP/1.1
+
+###
+GET http://localhost:8080/toAquisition/61a921f6028954d4f0319e6b HTTP/1.1
+###
+
+###
+### Create stock
+POST http://localhost:8080/stock HTTP/1.1
+content-type: application/json
+
+{
+    "name": "The Silver Chair",
+    "pages": 124,
+    "author": "C.S. Lewis",
+    "publishDate": "1947",
+    "aquireDate": "7 August 2011",
+    "publisher": "Penguin",
+    "edition": "2nd"
+}
+### PUT stock
+PUT http://localhost:8080/stock/6456d7b9983282e21d74e499 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "The Silver Chair",
+    "pages": 124,
+    "author": "Jack Lewis",
+    "publishDate": "1947",
+    "aquireDate": "7 August 2011",
+    "publisher": "Penguin",
+    "edition": "2nd"
+}
+###
+GET http://localhost:8080/stock/645569048c151a7063a19ef6 HTTP/1.1
+
+### DELETE stock
+DELETE http://localhost:8080/stock/6456d227a3e8252bccff4b5b HTTP/1.1
+
+###
+### Create Aquisition
+POST http://localhost:8080/toAquisition HTTP/1.1
+content-type: application/json
+
+{
+    "name": "The Return of the King",
+    "author": "J.R.R. Tolkien",
+    "publishDate": "1947",
+    "publisher": "Penguin",
+    "edition": "3rd"
+}
+### PUT Aquisition
+PUT http://localhost:8080/toAquisition/6456d7b9983282e21d74e499 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Letters from Father Christmas",
+    "author": "J.R.R. Tolkien",
+    "publishDate": "1948",
+    "publisher": "Penguin",
+    "edition": "3rd"
+}
+###
+GET http://localhost:8080/toAquisition/645569048c151a7063a19ef6 HTTP/1.1
+
+### DELETE Aquisition
+DELETE http://localhost:8080/toAquisition/6456d227a3e8252bccff4b5b HTTP/1.1
+
+###
+GET https://cse-341-bookstore-dhh4.onrender.com/ HTTP/1.1
+###
+
+
+
+GET https://cse-341-bookstore-dhh4.onrender.com/stock HTTP/1.1
+###
+GET https://cse-341-bookstore-dhh4.onrender.com/toAquisition HTTP/1.1
+###
+GET https://cse-341-bookstore-dhh4.onrender.com/stock/61a921f6028954d4f0319e6d HTTP/1.1
+###
+GET https://cse-341-bookstore-dhh4.onrender.com/toAquisition/61a921f6028954d4f0319e6b HTTP/1.1
+###
+
+###
+
+### Create stock
+POST https://cse-341-bookstore-dhh4.onrender.com/stock HTTP/1.1
+content-type: application/json
+
+{
+    "name": "The Voyage of the Dawn Treader",
+    "pages": 124,
+    "author": "C.S. Lewis",
+    "publishDate": "1947",
+    "aquireDate": "7 August 2011",
+    "publisher": "Penguin",
+    "edition": "2nd"
+}
+### PUT stock
+PUT https://cse-341-bookstore-dhh4.onrender.com/stock/6456d87ad3d37ce0285e88a7 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "The Voyage of the Dawn Treader",
+    "pages": 124,
+    "author": "Jack Lewis",
+    "publishDate": "1947",
+    "aquireDate": "7 August 2011",
+    "publisher": "Penguin",
+    "edition": "2nd"
+}
+###
+
+### DELETE stock
+DELETE https://cse-341-bookstore-dhh4.onrender.com/stock/6456d87ad3d37ce0285e88a7 HTTP/1.1
+
+###
+### Create toAquisition
+POST https://cse-341-bookstore-dhh4.onrender.com/toAquisition HTTP/1.1
+content-type: application/json
+
+{
+    "name": "The Return of the King",
+    "author": "J.R.R. Tolkien",
+    "publishDate": "1947",
+    "publisher": "Penguin",
+    "edition": "5th"
+}
+### PUT toAquisition
+PUT https://cse-341-bookstore-dhh4.onrender.com/toAquisition/6456d87ad3d37ce0285e88a7 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "The Return of the King",
+    "author": "J.R.R. Tolkien",
+    "publishDate": "1947",
+    "publisher": "Penguin",
+    "edition": "7th"
+}
+###
+
+### DELETE toAquisition
+DELETE https://cse-341-bookstore-dhh4.onrender.com/toAquisition/6456d87ad3d37ce0285e88a7 HTTP/1.1
+
+###

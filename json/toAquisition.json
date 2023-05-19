@@ -1,0 +1,51 @@
+[{
+    "_id": {
+      "$oid": "61a921f6028954d4f0319e6b"
+    },
+    "name": "The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "publishDate": "1948",
+    "publisher": "Penguin",
+    "edition": "3rd"
+  },{
+
+    "_id": {
+      "$oid": "61a921f6028954d4f0319e6a"
+    },
+    "name": "The Two Towers",
+    "author": "J.R.R. Tolkien",
+    "publishDate": "1947",
+    "publisher": "Penguin",
+    "edition": "3rd"
+  },{
+
+    "_id": {
+      "$oid": "61a921f6028954d4f0319e6m"
+    },
+    "name": "The Return of the King",
+    "author": "J.R.R. Tolkien",
+    "publishDate": "1947",
+    "publisher": "Penguin",
+    "edition": "3rd"
+  },{
+
+    "_id": {
+      "$oid": "61a921f6028954d4f0319e6n"
+    },
+    "name": "Letters from Father Christmas",
+    "author": "J.R.R. Tolkien",
+    "publishDate": "1948",
+    "publisher": "Penguin",
+    "edition": "3rd"
+  },{
+
+    "_id": {
+      "$oid": "61a921f6028954d4f0319e6o"
+    },
+    "name": "The Children of Hurrin",
+    "author": "J.R.R. Tolkien",
+    "publishDate": "1957",
+    "publisher": "Penguin",
+    "edition": "3rd"
+  }
+]

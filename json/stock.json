@@ -1,0 +1,61 @@
+[{
+    "_id": {
+      "$oid": "61a921f6028954d4f0319e6d"
+    },
+    "name": "The Lion the Witch and the Wardrobe",
+    "pages": 100,
+    "author": "C.S. Lewis",
+    "publishDate": "1943",
+    "aquireDate": "7 August 2011",
+    "publisher": "Penguin",
+    "edition": "3rd"
+  },{
+
+    "_id": {
+      "$oid": "61a921f6028954d4f0319e6e"
+    },
+    "name": "The Magician's Nephew",
+    "pages": 99,
+    "author": "C.S. Lewis",
+    "publishDate": "1947",
+    "aquireDate": "7 August 2011",
+    "publisher": "Penguin",
+    "edition": "3rd"
+  },{
+
+    "_id": {
+      "$oid": "61a921f6028954d4f0319e6f"
+    },
+    "name": "The Silver Chair",
+    "pages": 120,
+    "author": "C.S. Lewis",
+    "publishDate": "1947",
+    "aquireDate": "7 August 2011",
+    "publisher": "Penguin",
+    "edition": "3rd"
+  },{
+
+    "_id": {
+      "$oid": "61a921f6028954d4f0319e6g"
+    },
+    "name": "The Horse and His Boy",
+    "pages": 100,
+    "author": "C.S. Lewis",
+    "publishDate": "1948",
+    "aquireDate": "7 August 2011",
+    "publisher": "Penguin",
+    "edition": "3rd"
+  },{
+
+    "_id": {
+      "$oid": "61a921f6028954d4f0319e6h"
+    },
+    "name": "The Voyage of the Dawn Treader",
+    "pages": 185,
+    "author": "C.S. Lewis",
+    "publishDate": "1947",
+    "aquireDate": "7 August 2011",
+    "publisher": "Penguin",
+    "edition": "3rd"
+  }
+]

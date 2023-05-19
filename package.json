@@ -2,23 +2,37 @@
   "name": "bookstore",
   "version": "1.0.0",
   "description": "CSE 341 MongoDB API Node.js Typescript swagger render",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "dev_start": "nodemon app.js",
+    "swagger": "node ./swagger.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JDeVoldemort/bookstore.git"
   },
-  "author": "",
+  "author": "Jim DeMordaunt",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JDeVoldemort/bookstore/issues"
   },
   "homepage": "https://github.com/JDeVoldemort/bookstore#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-graphql": "^0.12.0",
-    "graphql": "^15.8.0"
+    "graphql": "^15.8.0",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.2.0",
+    "nodemon": "^2.0.22",
+    "rest": "^2.0.0",
+    "swagger-ui-express": "^4.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "swagger-autogen": "^2.23.1"
   }
 }
