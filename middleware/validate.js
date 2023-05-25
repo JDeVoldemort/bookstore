@@ -5,8 +5,8 @@ const saveStock = (req, res, next) => {
     name: 'required|string',
     pages: 'required|string',
     author: 'required|string',
-    publishDate: 'required|date',
-    aquireDate: 'required|date',
+    publishDate: 'required|string',
+    aquireDate: 'required|string',
     publisher: 'required|string',
     edition: 'required|string'
 
