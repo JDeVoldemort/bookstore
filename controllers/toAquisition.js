@@ -3,7 +3,10 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAllAquisition = async (req, res, next) => {
   const result = await mongodb.getDb().db().collection('toAquisition').find();
-  result.toArray().then((lists) => {
+  result.toArray().then((err, lists) => {
+    if (err) {
+      res.status(400).json({ message: err });
+    }
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
@@ -11,13 +14,19 @@ const getAllAquisition = async (req, res, next) => {
 
 const getOneAquisition = async (req, res, next) => {
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid Aquisition id to find a Aquisition.');
+    }
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
     .db()
     .collection('toAquisition')
     .find({ _id: userId });
-  result.toArray().then((lists) => {
+  result.toArray().then((err, lists) => {
+    if (err) {
+      res.status(400).json({ message: err });
+    }
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
   });
@@ -28,6 +37,7 @@ catch (err) {
 };
 const createAquisition = async (req, res) => {
   try {
+
 
   const book = {
     name: req.body.name,
@@ -49,6 +59,9 @@ const createAquisition = async (req, res) => {
 };
 const updateAquisition = async (req, res) => {
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid Aquisition id to update a Aquisition.');
+    }
 
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
@@ -79,6 +92,9 @@ catch (err) {
 
 const deleteAquisition = async (req, res) => {
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid Aquisition id to delete a Aquisition.');
+    }
 
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db().collection('toAquisition').deleteOne({ _id: userId }, true);
