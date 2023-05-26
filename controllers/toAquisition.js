@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAllAquisition = async (req, res, next) => {
   const result = await mongodb.getDb().db().collection('toAquisition').find();
-  result.toArray.then((err, lists) => {
+  result.toArray.then(( lists) => {
     // if (err) {
     //   res.status(400).json({ message: err });
     // }
