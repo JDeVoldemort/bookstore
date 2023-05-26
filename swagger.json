@@ -55,7 +55,7 @@
                   "example": "any"
                 },
                 "pages": {
-                  "example": "any"
+                  "example": "int"
                 },
                 "author": {
                   "example": "any"
@@ -128,7 +128,7 @@
                   "example": "any"
                 },
                 "pages": {
-                  "example": "any"
+                  "example": "int"
                 },
                 "author": {
                   "example": "any"

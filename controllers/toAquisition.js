@@ -14,10 +14,11 @@ const getAllAquisition = async (req, res, next) => {
 
 const getOneAquisition = async (req, res, next) => {
   try {
-    if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Must use a valid Aquisition id to find a Aquisition.');
-    }
+
   const userId = new ObjectId(req.params.id);
+  if (!userId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid Aquisition id to find a Aquisition.');
+  }
   const result = await mongodb
     .getDb()
     .db()
@@ -59,12 +60,13 @@ const createAquisition = async (req, res) => {
 };
 const updateAquisition = async (req, res) => {
   try {
-    if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Must use a valid Aquisition id to update a Aquisition.');
-    }
+
 
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
+  if (!userId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid Aquisition id to update a Aquisition.');
+  }
   const book = {
     name: req.body.name,
     author: req.body.author,
@@ -84,6 +86,10 @@ const updateAquisition = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while updating the Aquisition.');
   }
+  // if (!userId.isValid(req.params.id)) {
+  //   res.status(400).json('Must use a valid Aquisition id to update a Aquisition.');
+  // }
+  // if (res.status(400).json(response.error || 'Invalid entry check datatypes')
 }
 catch (err) {
   res.status(500).json(err);
@@ -92,11 +98,12 @@ catch (err) {
 
 const deleteAquisition = async (req, res) => {
   try {
-    if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Must use a valid Aquisition id to delete a Aquisition.');
-    }
+
 
   const userId = new ObjectId(req.params.id);
+  if (!userId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid Aquisition id to delete a Aquisition.');
+  }
   const response = await mongodb.getDb().db().collection('toAquisition').deleteOne({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
