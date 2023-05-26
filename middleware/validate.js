@@ -3,7 +3,7 @@ const validator = require('../helpers/validate');
 const saveStock = (req, res, next) => {
   const validationRule = {
     name: 'required|string',
-    pages: 'required|string',
+    pages: 'required|int',
     author: 'required|string',
     publishDate: 'required|string',
     aquireDate: 'required|string',
