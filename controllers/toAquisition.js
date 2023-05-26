@@ -4,9 +4,9 @@ const ObjectId = require('mongodb').ObjectId;
 const getAllAquisition = async (req, res, next) => {
   const result = await mongodb.getDb().db().collection('toAquisition').find();
   result.toArray.then((err, lists) => {
-    if (err) {
-      res.status(400).json({ message: err });
-    }
+    // if (err) {
+    //   res.status(400).json({ message: err });
+    // }
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
