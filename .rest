@@ -42,7 +42,7 @@ content-type: application/json
 GET http://localhost:8080/stock/645569048c151a7063a19ef6 HTTP/1.1
 
 ### DELETE stock
-DELETE http://localhost:8080/stock/6456d227a3e8252bccff4b5b HTTP/1.1
+DELETE http://localhost:8080/stock/61a921f6028954d4f0319e6d HTTP/1.1
 
 ###
 ### Create Aquisition
@@ -109,7 +109,7 @@ content-type: application/json
 
 {
     "name": "The Voyage of the Dawn Treader",
-    "pages": "124",
+    "pages": 124,
     "author": "Jack Lewis",
     "publishDate": "1947",
     "aquireDate": "7 August 2011",
@@ -119,7 +119,7 @@ content-type: application/json
 ###
 
 ### DELETE stock
-DELETE https://cse-341-bookstore.onrender.com/stock/6456d87ad3d37ce0285e88a7 HTTP/1.1
+DELETE https://cse-341-bookstore.onrender.com/stock/64713470548e53b3a52e1ea7 HTTP/1.1
 
 ###
 ### Create toAquisition

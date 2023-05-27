@@ -8,20 +8,31 @@ var bookStoreDB = [
 {name:"Book 2", pages:453, id:2, author:"Author 1", publishDate:"12/12/12", aquireDate:"12/12/12", publisher:"Publisher 1", edition:"First"},
 {name:"Book 3", pages:452, id:3, author:"Author 1", publishDate:"12/12/12", aquireDate:"12/12/12", publisher:"Publisher 1", edition:"First"}
 ]
-const BookType = new GraphQLObjectType({
-    name: 'Book',
-    fields: () => ({
-        id: { type: GraphQLID  },
-        name: { type: GraphQLString },
-        pages: { type: GraphQLInt },
-        author: { type: GraphQLString }, 
-        publishDate: { type: GraphQLString },
-        aquireDate: { type: GraphQLString },
-        publisher: { type: GraphQLString },
-        edition: { type: GraphQLString },
+// const BookType = new GraphQLObjectType({
+//     name: 'Book',
+//     fields: () => ({
+//         id: { type: GraphQLID  },
+//         name: { type: GraphQLString },
+//         pages: { type: GraphQLInt },
+//         author: { type: GraphQLString }, 
+//         publishDate: { type: GraphQLString },
+//         aquireDate: { type: GraphQLString },
+//         publisher: { type: GraphQLString },
+//         edition: { type: GraphQLString },
 
-    })
-});
+//     })
+// });
+const stockSchema = new mongoose.Schema({
+    id: { type: String, required: true },
+    name: { type: String, required: true },
+    pages: { type: Number, required: true, min: 0 },
+    author: { type: String, required: true },
+    publishDate: { type: Date },
+    acquireDate: { type: Date },
+    publisher: { type: String },
+    edition: { type: String },
+  });
+  
 
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
