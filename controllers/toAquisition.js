@@ -20,11 +20,11 @@ const getAllAquisition = async (req, res, next) => {
 
 const getOneAquisition = async (req, res, next) => {
   try {
-
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid Aquisition id to find a Aquisition.');
+    }
   const userId = new ObjectId(req.params.id);
-  if (!userId.isValid(req.params.id)) {
-    res.status(400).json('Must use a valid Aquisition id to find a Aquisition.');
-  }
+
   const result = await mongodb
     .getDb()
     .db()
