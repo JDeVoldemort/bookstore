@@ -32,7 +32,7 @@ const getOneStock = async (req, res, next) => {
     .db()
     .collection('stock')
     .find({ _id: userId });
-  result.toArray().then((err, lists) => {
+  result.toArray().then((lists) => {
     // if (err) {
     //   res.status(400).json({ message: err });
     // }
