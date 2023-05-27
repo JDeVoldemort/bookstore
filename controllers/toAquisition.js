@@ -2,7 +2,9 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAllAquisition = async (req, res, next) => {
-  const result = await mongodb.getDb().db().collection('toAquisition').find();
+  try {
+
+    const result = await mongodb.getDb().db().collection('toAquisition').find();
   result.toArray.then(( lists) => {
     // if (err) {
     //   res.status(400).json({ message: err });
@@ -10,6 +12,10 @@ const getAllAquisition = async (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
+}
+  catch (err) {
+    res.status(500).json(err);
+  }
 };
 
 const getOneAquisition = async (req, res, next) => {
