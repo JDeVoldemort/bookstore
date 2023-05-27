@@ -80,6 +80,9 @@
           "201": {
             "description": "Created"
           },
+          "400": {
+            "description": "Bad Request: check datatypes and syntax"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -103,6 +106,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request: check datatypes and syntax"
           },
           "500": {
             "description": "Internal Server Error"
@@ -153,6 +159,9 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Bad Request: check datatypes and syntax"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -172,6 +181,9 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Bad Request: check datatypes and syntax"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -188,6 +200,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request: check datatypes and syntax"
           }
         }
       },
@@ -223,6 +238,9 @@
           "201": {
             "description": "Created"
           },
+          "400": {
+            "description": "Bad Request: check datatypes and syntax"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -246,6 +264,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request: check datatypes and syntax"
           },
           "500": {
             "description": "Internal Server Error"
@@ -290,6 +311,9 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Bad Request: check datatypes and syntax"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -308,6 +332,9 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request: check datatypes and syntax"
           },
           "500": {
             "description": "Internal Server Error"
