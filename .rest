@@ -83,7 +83,7 @@ GET https://cse-341-bookstore.onrender.com/stock HTTP/1.1
 ###
 GET https://cse-341-bookstore.onrender.com/toAquisition HTTP/1.1
 ###
-GET https://cse-341-bookstore.onrender.com/stock/61a921f6028954d4f0319e6d HTTP/1.1
+GET https://cse-341-bookstore.onrender.com/stock/6467fe66a0dafc7427592561 HTTP/1.1
 ###
 GET https://cse-341-bookstore.onrender.com/toAquisition/646ecbeeb25d3d01b5192bc8 HTTP/1.1
 ###
