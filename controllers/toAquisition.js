@@ -70,7 +70,7 @@ const updateAquisition = async (req, res) => {
 
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
-  if (!userId.isValid(req.params.id)) {
+  if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid Aquisition id to update a Aquisition.');
   }
   const book = {
