@@ -83,7 +83,7 @@ GET https://cse-341-bookstore.onrender.com/stock HTTP/1.1
 ###
 GET https://cse-341-bookstore.onrender.com/toAquisition HTTP/1.1
 ###
-GET https://cse-341-bookstore.onrender.com/stock/6467fe66a0dafc7427592561 HTTP/1.1
+GET https://cse-341-bookstore.onrender.com/stock/64718dfd335e3f5a879fc212 HTTP/1.1
 ###
 GET https://cse-341-bookstore.onrender.com/toAquisition/646ecbeeb25d3d01b5192bc8 HTTP/1.1
 ###
@@ -119,7 +119,7 @@ content-type: application/json
 ###
 
 ### DELETE stock
-DELETE https://cse-341-bookstore.onrender.com/stock/64713470548e53b3a52e1ea7 HTTP/1.1
+DELETE https://cse-341-bookstore.onrender.com/stock/64718070667a94311e94464b HTTP/1.1
 
 ###
 ### Create toAquisition
