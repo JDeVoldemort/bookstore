@@ -134,7 +134,7 @@ content-type: application/json
     "edition": "10th"
 }
 ### PUT toAquisition
-PUT https://cse-341-bookstore.onrender.com/toAquisition/647182701d46c1ed788a7863 HTTPS/1.1
+PUT https://cse-341-bookstore.onrender.com/toAquisition/647182701d46c1ed788a7863 HTTP/1.1
 content-type: application/json
 
 {
