@@ -85,7 +85,7 @@ GET https://cse-341-bookstore.onrender.com/toAquisition HTTP/1.1
 ###
 GET https://cse-341-bookstore.onrender.com/stock/61a921f6028954d4f0319e6d HTTP/1.1
 ###
-GET https://cse-341-bookstore.onrender.com/toAquisition/61a921f6028954d4f0319e6b HTTP/1.1
+GET https://cse-341-bookstore.onrender.com/toAquisition/646ecbeeb25d3d01b5192bc8 HTTP/1.1
 ###
 
 ###
@@ -96,7 +96,7 @@ content-type: application/json
 
 {
     "name": "The Voyage of the Dawn Treader",
-    "pages": 124,
+    "pages": 467,
     "author": "C.S. Lewis",
     "publishDate": "1947",
     "aquireDate": "7 August 2011",
