@@ -24,7 +24,7 @@ const getAllStock = async (req, res, next) => {
 const getOneStock = async (req, res, next) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Must use a valid stock id to find a stock.');
+      res.status(400).json(response.error || 'Must use a valid stock id to find a stock.');
     }
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
@@ -70,7 +70,7 @@ const createStock = async (req, res) => {
 const updateStock = async (req, res) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json('Must use a valid stock id to update a stock.');
+    res.status(400).json(response.error || 'Must use a valid stock id to update a stock.');
   }
 
   const userId = new ObjectId(req.params.id);
