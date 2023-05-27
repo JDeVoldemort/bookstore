@@ -66,7 +66,7 @@ const createAquisition = async (req, res) => {
 };
 const updateAquisition = async (req, res) => {
   try {
-    if (ObjectId.isValid(req.params.id)) {
+    if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid Aquisition id to update a Aquisition.');
     }
 
