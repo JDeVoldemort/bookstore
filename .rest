@@ -147,6 +147,6 @@ content-type: application/json
 ###
 
 ### DELETE toAquisition
-DELETE https://cse-341-bookstore.onrender.com/toAquisition/6456d87ad3d37ce0285e88a7 HTTP/1.1
+DELETE https://cse-341-bookstore.onrender.com/toAquisition/647181f530392734a6ca7f31 HTTP/1.1
 
 ###

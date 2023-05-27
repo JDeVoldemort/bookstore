@@ -104,12 +104,12 @@ catch (err) {
 
 const deleteAquisition = async (req, res) => {
   try {
-
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid Aquisition id to delete a Aquisition.');
+    }
 
   const userId = new ObjectId(req.params.id);
-  if (!userId.isValid(req.params.id)) {
-    res.status(400).json('Must use a valid Aquisition id to delete a Aquisition.');
-  }
+
   const response = await mongodb.getDb().db().collection('toAquisition').deleteOne({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
