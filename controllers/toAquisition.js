@@ -5,7 +5,7 @@ const getAllAquisition = async (req, res, next) => {
   try {
 
     const result = await mongodb.getDb().db().collection('toAquisition').find();
-  result.toArray.then(( lists) => {
+  result.toArray().then(( lists) => {
     // if (err) {
     //   res.status(400).json({ message: err });
     // }

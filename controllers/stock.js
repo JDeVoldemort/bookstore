@@ -2,6 +2,8 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAllStock = async (req, res, next) => {
+  try {
+
   const result = await mongodb.getDb().db().collection('stock').find();
  
   result.toArray().then((lists) => {
@@ -11,6 +13,12 @@ const getAllStock = async (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
+  
+
+  }
+  catch (err) {
+    res.status(500).json(err);
+  }
 };
 
 const getOneStock = async (req, res, next) => {
