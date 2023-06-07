@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 app.get('/profile', requiresAuth(), (req, res) => {
-  res.send(JSON.stringify(req.oidc.user));
+  res.send(JSON.stringify(req.oidc.user.picture));
 });
 
 //const graphqlHTTP = require('express-graphql');
