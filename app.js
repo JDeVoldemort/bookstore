@@ -1,5 +1,5 @@
 const express = require('express');
-const { auth } = require('express-openid-connect');
+const { auth, requiresAuth } = require('express-openid-connect');
 require("dotenv").config();
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -31,6 +31,9 @@ app.use(auth(config));
 // req.isAuthenticated is provided from the auth router
 app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
 });
 
 //const graphqlHTTP = require('express-graphql');
