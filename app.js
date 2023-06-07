@@ -1,4 +1,38 @@
 const express = require('express');
+const { auth } = require('express-openid-connect');
+require("dotenv").config;
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+const MongoClient = require('mongodb').MongoClient;
+
+const mongodb = require('./db/connect');
+
+// const professionalRoutes = require('./routes/professional');
+// const port : string | 8080 = process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
+const app = express();
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.secret,
+  baseURL: process.eventNames.baseURL,
+  clientID: process.env.clientID,
+  issuerBaseURL: process.eventNames.issuerBaseURL
+};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+
+// req.isAuthenticated is provided from the auth router
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
+
 //const graphqlHTTP = require('express-graphql');
 //const schema = require('./schema/schema');
 
@@ -16,20 +50,7 @@ const express = require('express');
 //     graphiql: true
 //   })
 // );
-const bodyParser = require('body-parser');
-const cors = require('cors');
 
-const MongoClient = require('mongodb').MongoClient;
-
-const mongodb = require('./db/connect');
-
-// const professionalRoutes = require('./routes/professional');
-// const port : string | 8080 = process.env.PORT || 8080;
-const port = process.env.PORT || 8080;
-const app = express();
-
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
 
 // app
 // .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
