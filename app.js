@@ -1,6 +1,6 @@
 const express = require('express');
 const { auth } = require('express-openid-connect');
-require("dotenv").config;
+require("dotenv").config();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -20,9 +20,9 @@ const config = {
   authRequired: false,
   auth0Logout: true,
   secret: process.env.secret,
-  baseURL: process.eventNames.baseURL,
+  baseURL: process.env.baseURL,
   clientID: process.env.clientID,
-  issuerBaseURL: process.eventNames.issuerBaseURL
+  issuerBaseURL: process.env.issuerBaseURL
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
